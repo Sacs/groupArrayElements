@@ -1,8 +1,15 @@
 /**
- * Divides an input array in to smaller sub arrays with a length less
- * than or equal to the specified groupSize
- * @param  {} inputArray
- * @param  {} groupSize
+ * Given an array of length >= 0, and a positive integer N, this function
+ * should return the contents of the array divided into N equally
+ * sized arrays.
+ *
+ * Where the size of the original array cannot be divided equally
+ * by N, the final part should have a length equal to the remainder.
+ *
+ * @param  {array} inputArray the array to split
+ * @param  {number} groupSize chunk size of groups to return.
+ *
+ * @returns {array} the group of arrays
  */
 export const groupArrayElements = (inputArray, groupSize) => {
 
@@ -22,6 +29,12 @@ export const groupArrayElements = (inputArray, groupSize) => {
 }
 
 
+/**
+ * Runs some validation on inputs and throw if invalid
+ *
+ * @param  {} inputArray array to split
+ * @param  {} size  size of array chunks
+ */
 const validateInputs = (inputArray, size) => {
   if (!Array.isArray(inputArray)) {
     throw new TypeError('first paramater of this function must be an array');
